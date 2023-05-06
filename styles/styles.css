@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;1,300&display=swap');
+
+
 :root {
     --white: #ffffff;
     --grey: #414141;
@@ -10,7 +13,8 @@
 }
 
 * {
-    font-family: 'Montserrat', sans-serif;    padding: 0rem;
+    font-family: 'Montserrat', sans-serif;    
+    padding: 0rem;
     margin: 0rem;
     box-sizing: border-box;   
 }
@@ -19,36 +23,63 @@ html {
     font-size: 62.5%; 
     scroll-behavior: smooth;
 }
-
-
-h1      {font-size: 3.2rem;}
-h2      {font-size: 2rem;  }
-h3      {font-size: 1.9rem;}
-h4      {font-size: 1.6rem;}
-p       {font-size: 1.6rem;}
-label   {font-size: 2rem;  }
-option  {font-size: 2rem;  }
-
+h1      {   font-size: 3.2rem;}
+h2      {
+            font-size: 2rem;  
+            color: var(--blue);
+        }
+h3      {   font-size: 1.9rem;}
+h4      {   font-size: 1.6rem;}
+label   {   font-size: 2rem;  }
+option  {   font-size: 2rem;  }
+p {
+            display: block;
+            font-size: 1.6rem;
+            margin-block-start: 1em;
+            margin-block-end: 1em;
+            margin-inline-start: 0px;
+            margin-inline-end: 0px;
+}
 
 a {
-    text-decoration: none;
-    color: var(--white)
+            text-decoration: none;
+            color: var(--white)
 }
-
 a:hover {
-    color: #bbbbbb;
-}
-
-/* Para que sirve? */
-section[id] {
-    scroll-margin-top: 8rem;
+            color: #bbbbbb;
 }
 
 
-main {
+/* CONTAINER ZONE */
+.section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    min-height: 100vh;
+    position: relative;
+    background-attachment: fixed;
+
+}
+
+
+.section__title{
     width: 100%;
-    background-color: antiquewhite;
+    display: flex;
+    justify-content: center;
+}
 
+.parent__container{
+    display: flex;
+}
+
+.container__title--secondary {
+    font-size: 3rem;
+    color: var(--blue);
+}
+
+.container {
+    margin: 1.5rem;
 }
 
 
@@ -98,7 +129,6 @@ main {
 
 .nav-menu-link {
     padding: 0.8rem 1.2rem;
-    border-radius: 0.3rem;
 }
 
 .nav-toggle {
@@ -115,19 +145,13 @@ main {
 
 
 .nav__rrhh img {
-    height: 20px;
+    height: 2.5rem;
+    margin: 0rem 0.9rem;
 }
 
 
 
 /* ///////////// HOME ///////////// */
-.home {
-    min-height: 100vh;
-    position: relative;
-}
-
-
-
 .home__video-background {
     object-fit: cover;
     top: 0;
@@ -135,53 +159,50 @@ main {
     min-height: 100vh;
     height: 100%;
     width: 100%;
+    position: absolute;
 }
-
-/* Foto de mi cara */
-.home__img {
-    /*position: absolute;*/
-    height: 20rem;
-    width: 20rem;
-    border-radius: 50%;
-    position: relative;
-    bottom: 6rem;
-}
-
-
 
 .home__description {
-    /*display: flex;
-    justify-content: center;
-    align-items: center;*/
     position: absolute;
-    top: 50px;
-}
-
-.home__title {
-    font-size: 6rem;
-    text-shadow: 1px 1px black;
-    color: var(--yellow)
-}
-
-.home__title--primary, .home__title--secondary {
-    font-size: 3rem;
-    color: #f5f5f5;
-    text-shadow: 0.1rem 0.1rem black;
-}
-
-.container {
+    top: 50%;
+    transform: translateY(-50%);
     width: 100%;
-    display: inherit;
-    max-width: 120rem;
-    justify-content: inherit;
-    margin: 0 auto;
-    padding: 0 0.2rem;
-
 }
 
-.about {
-    z-index: 10;
+.home__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center
 }
+
+.home__container P {
+    color: white;
+    font-size: 2.4rem;
+    font-weight: bold;
+    text-shadow: 0.5rem 0.5rem 0.5rem #000000;
+}
+
+.home__img {
+    position: relative;
+    width: 35rem;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 999px;
+    padding: 1rem;
+}
+
+
+/*  NOSOTROS  */
+#nosotros__section {
+    background-image: url('../img/nosotros.png');
+    background-size: cover;
+}
+
+.title__section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
 
 .about__title {
     color:var(--grey);
@@ -210,57 +231,10 @@ main {
     color: var(--grey);
 }
 
-p {
-    display: block;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-}
 
-.about__button--cv {
-    background-color: var(--yellow);
-    color: var(--white);
-    padding: 0.5rem 3rem;
-    display: inline-block;
-    align-self: center;
 
-    font: bold;
-    border-radius: 0.5rem;
-    text-decoration: none;
-}
 
-.skill__list {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 1rem;
-}
 
-.skill__title {
-    /*color: var(--grey);*/
-    display: flex;
-    justify-content: center;
-}
-
-.skill__item {
-    font-size: 6.5rem;
-    color: var(--grey);
-    padding: 3.5rem;
-    transition: all 0.3s;
-    min-width: 13rem;
-    height: 18rem;
-    text-align: center;
-}
-
-.skill__item img {
-    max-width: 6rem;
-    max-height: 6rem;
-}
-
-.skill__name {
-    font-size: 16px;
-    text-align: center;
-}
 
 .main__service {
     text-align: center;
@@ -268,13 +242,9 @@ p {
 }
 
 /* SERVICES */
-.service__container {
-    width: 100%;
-    display: inherit;
-    max-width: 120rem;
-    justify-content: inherit;
-    margin: 0 auto;
-    padding: 0 2rem;
+#servicios__section {
+    background-image: url('../img/servicios.png');
+    background-size: cover;
 }
 
 .services__grid {
@@ -283,44 +253,9 @@ p {
     gap: 2rem;
 }
 
-h2 {
-    display: block;
-    font-size: 1.5em;
-    margin-block-start: 0.83em;
-    margin-block-end: 0.83em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    font-weight: bold;
-}
 
 
-.section__title {
-    color: var(--grey);
-    font-size: 35px;
-    margin-bottom: 30px;
-    display: flex;
-}
 
-.section__subtitle {
-    color: var(--grey);
-    text-align: start;
-    margin-bottom: 20px;
-}
-
-.services__item i {
-    transition: all 0.3s;
-    font-size: 40px;
-    margin: 20px 0;
-}
-
-.services__item h3 {
-    color: var(--grey);
-    margin-bottom: 15px;
-}
-
-.services__item p {
-    color: var(--grey);
-}
 
 
 
@@ -333,7 +268,7 @@ h2 {
 
 /* Mobile */
 
-@media (max-width: 1000px){
+@media (max-width: 1100px){
     .header {
         height: 6rem;
     }
@@ -389,7 +324,6 @@ h2 {
         }
 
         .home__description {
-            
             display: flex;
             align-items: center;
             flex-direction: column;

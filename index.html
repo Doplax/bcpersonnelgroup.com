@@ -5,15 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/styles.css">
-
+    <link rel="icon" type="image/png" href="./img/incon.webp">  
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
     <title>BC Personnel Group</title>
-
 </head>
+
 <body>
     <header id="header" class="header">
         <nav class="header__nav">
             <a href="#home" class="logo nav-link">
-                <img class="nav__logo" src="./img/company_logo_white.png" alt="logo de la compañia">
+                <img class="nav__logo" src="./img/BCPersonnelGroup-logo-white.png" alt="logo de la compañia">
             </a>
             <button class="nav-toggle" arial-label="Abrir menu">
                 <i class="fas fa-bars"></i>
@@ -46,57 +47,53 @@
                     <img src="https://github.com/Doplax/doplax/blob/main/img/icon/twitter-blanco.png?raw=true" alt="logo de twitter">
                 </a>
                 <a href="https://www.facebook.com/profile.php?id=100069237726692">
-                    <img src="https://github.com/Doplax/doplax/blob/main/img/icon/twitter-blanco.png?raw=true" alt="logo de instagram">
-                </a>
-                <a href="https://www.facebook.com/profile.php?id=100069237726692">
-                    <img src="https://github.com/Doplax/doplax/blob/main/img/icon/twitter-blanco.png?raw=true" alt="logo de twitter">
+                    <img src="https://github.com/Doplax/doplax/blob/main/img/icon/instagram-blanco.png?raw=true" alt="logo de instagram">
                 </a>
             </div>
         </nav>
     </header>
 
-    
     <main id="main">
-        <!-- Arreglar el contenedor -->
-        <section id="home__section" class="home">
+        <!-- HOME -->
+        <section id="home__section" class="section">
                 <video class="home__video-background" preload="auto" autoplay="true" loop="true" muted="true">
                     <source src="./img/home-video.mp4" type="video/mp4">
                 </video>
                 
                 <div class="home__description">
-                    <!--<img class="home__img" src="./img/foto-perfil.png" alt="">-->
                     <div class="home__container">
-                        <span class="home__title--primary">Hola!</span>
-                        <h1 class="home__title"> Me llamo</h1>
-                        <span class="home__title--secondary">Y soy Desarollador Web Front-End</span>
+                        <img class="home__img" src="./img/BCPersonnelGroup-logo.webp" alt="logo de la empresa" >
+                        <P>"Las personas de hoy son el mañana de tu empresa"</P>
                     </div>
                 </div>
         </section>
 
-        <!-- porque se llaman igual?-->
-        <section id="nosotros__section" class="about">
-            <div class="container">
-                <h2 class="about__title"> Hola, somos BC Personnel Group... </h2>
-                <div class="about__grid">
-                    <div class="about__description">
-                        <h2>Somos una empresa joven que trabaja con la ilusión de convertir la innovación en resultados tangibles que ayuden a transformar a nuestros clientes.</h2>
-                        <p>A través de nuestra Experiencia, Tecnología puntera y el conocimiento del Negocio, creamos servicios y oportunidades laborales con el objetivo de ayudar a nuestros clientes a crecer su negocio.</p>
+        <!-- NOSOTROS -->
+        <section id="nosotros__section" class="section">
+                <h2 class="section__title">NOSOTROS</h2>
+                <div class="parent__container">
+                    <div class="container">
+                        <h2 class="container__title--secondary"> Somos BC Personnel Group... </h2>
+                        <div class="">
+                            <p>Una empresa joven que trabaja con la ilusión de convertir la innovación en resultados tangibles que ayuden a transformar a nuestros clientes.</p>
+                            <p>A través de nuestra Experiencia, Tecnología puntera y el conocimiento del Negocio, creamos servicios y oportunidades laborales con el objetivo de ayudar a nuestros clientes a crecer su negocio.</p>
+                        </div>
                     </div>
-                    <div class="about__skills">
-                        <h2 class="skill__title">…todavía no nos conoces…</h2>
+                    <div class="container">
+                        <h2 class="container__title--secondary">…todavía no nos conoces…</h2>
                         <p>La adaptación de la tecnología para la gestión de nuestros recursos, es nuestra mayor fortaleza.</p>
                         <p>- Negocio: con sede en Bilbao, Madrid, Barcelona y A Coruña, en BC Personnel Group contamos con una red de profesionales cualificados y con el fin de cubrir las necesidades de nuestros clientes en todo el territorio nacional.</p>
                         <p>- Experiencia: nuestro grupo de profesionales lleva más de 5 años colaborando con gran parte de empresas líderes en el sector tecnológico en la región, siempre orientada al resultado.</p>
                         <p>- Tecnología: aquí reside nuestro mayor grado diferencial. La IA (Inteligencia Artificial) en combinación con el Bigdata, nos hace dar con el candidato ideal a golpe de clic, en tiempo récord y de una forma mucho más eficaz.</p>
                     </div>
                 </div>
-            </div>
+                
         </section>
 
-        <section id="servicios__section" class="main__service">
-            <div class="service__container">
-                <h2 class="section__tittle">Servicios</h2>
-                <h3 class="section__subtitle">Servicios que ofrezco a mis clientes</h3>
+        <!-- SERVICIOS -->
+        <section id="servicios__section" class="section">
+                <h1 class="section__title">Servicios</h1>
+                <h2 class="section__subtitle">Servicios que ofrezco a mis clientes</h2>
                 <div class="services__grid">
                     <div class="services__item">
                         <i class="fa-solid fa-mobile-screen-button"></i>
@@ -132,7 +129,7 @@
             </div>
         </section>
 
-        <!-- rellenarla con js para no tener que hardcodearlo -->
+        <!-- SELECCIÓN -->
         <section id="seleccion__section" class="main__portfolio">
             <div class="portfolio__container">
                 <h2 class="portfolio__title">portfolio</h2>
@@ -190,14 +187,19 @@
             </div>
         </section>
 
+        <!-- ACADEMY -->
         <section id="academy__section">
             <!-- Aqui puedo poner un google forms, para generar un formulario real -->
         </section>
 
+        <!-- CONTACTO -->
         <section id="contacto__section">
             <!-- Aqui puedo poner un google forms, para generar un formulario real -->
         </section>
     </main>
+
+
+    <!-- FOOTER -->
 
     <footer class="footer">
         <div class="footer__container">
@@ -211,7 +213,9 @@
             <p>Bult by Doplax.Dev</p>
         </div>
     </footer>
+
+    <!-- SCRIPTS -->
     <script src="./js/mian.js"></script>
-    <script src="https://kit.fontawesome.com/dbdce7c941.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
 </body>
 </html>
