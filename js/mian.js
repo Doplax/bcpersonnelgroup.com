@@ -63,3 +63,34 @@ navMenuItem.addEventListener("click", closeMenu);
 //check.addEventListener("click", handleLanguage);
 window.addEventListener("scroll", handleScroll);
 
+
+//document.addEventListener("DOMContentLoaded", () => {
+//    const sections = document.querySelectorAll(".section");
+//    let scrollTimeout;
+  
+//    window.addEventListener("scroll", () => {
+//      clearTimeout(scrollTimeout);
+  
+//      scrollTimeout = setTimeout(() => {
+//        let closestSection = null;
+//        let minDistance = Number.MAX_VALUE;
+  
+//        sections.forEach((section) => {
+//          const distanceFromTop = Math.abs(section.getBoundingClientRect().top);
+//          if (distanceFromTop < minDistance) {
+//            minDistance = distanceFromTop;
+//            closestSection = section;
+//          }
+//        });
+  
+//        window.scrollTo({
+//          top: closestSection.offsetTop,
+//          behavior: "smooth",
+//        });
+//      }, 100);
+//    });
+//  });
+  
+
+
+  
