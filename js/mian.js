@@ -1,20 +1,4 @@
 // FUNCIONES
-// Función para manejar el evento de clic en el botón de menú
-//function handleMenuToggle() {
-//    navMenu.classList.toggle("nav-menu_visible");
-
-//    if (navMenu.classList.contains("nav-menu_visible")) {
-//        navToggle.setAttribute("aria-label", "Cerrar menú");
-//    } else {
-//        navToggle.setAttribute("aria-label", "Abrir menú");
-//    }
-//}
-
-// Función para cerrar el menú
-//function closeMenu() {
-//    navMenu.classList.remove("nav-menu_visible");
-//}
-
 // Función para manejar la animación del menú
 function scrollMenu() {
     const header = document.getElementById("header");
@@ -61,15 +45,15 @@ function nextSection() {
 
 
 
+
 // VARIABLES
 const navToggle = document.querySelector(".nav-toggle");
 const navMenuItem = document.querySelector(".nav-menu");
+const currentYear = new Date().getFullYear();
+const yearElement = document.getElementById("currentYear");
+yearElement.innerText = currentYear;
 
-
-//navToggle.addEventListener("click", handleMenuToggle);
-//navMenuItem.addEventListener("click", closeMenu);
 document.addEventListener("DOMContentLoaded", nextSection);
-
 
 window.addEventListener("scroll", ()=> scrollMenu());
 
